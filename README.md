@@ -121,7 +121,7 @@ Requirements: Python 3.9 or newer, an MPI library (MPICH or Open MPI), and `mpi4
    ```bash
    git clone https://github.com/rahul-r49/FSS.git
    cd FSS
-   python -m venv .venv
+   python3 -m venv .venv
    source .venv/bin/activate          # Windows (PowerShell): .venv\Scripts\activate
    ```
 

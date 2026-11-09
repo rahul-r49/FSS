@@ -13,8 +13,12 @@ import numpy as np
 from fss import SpectralGrid, ShallowWater, IFRK4, initial
 
 
-def fields_and_spectra(dirs, out="results/fields_and_spectra.png"):
-    os.makedirs(os.path.dirname(out), exist_ok=True)
+def fields_and_spectra(dirs):
+    # file name built from the f and n of each run, so new runs get new names
+    tag = "_".join(f"f{float(np.load(f'{d}/final.npz')['f']):g}_n{int(np.load(f'{d}/final.npz')['n'])}"
+                   for d in dirs)
+    out = f"results/fields_{tag}.png"
+    os.makedirs("results", exist_ok=True)
     fig, ax = plt.subplots(1, len(dirs) + 1, figsize=(5 * (len(dirs) + 1), 4.4))
     for j, d in enumerate(dirs):
         z = np.load(f"{d}/final.npz")
