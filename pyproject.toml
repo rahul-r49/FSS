@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fss"
+version = "0.2.0"
+description = "MPI-parallel pseudo-spectral solver for the 2D rotating shallow-water equations"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "matplotlib", "mpi4py"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
