@@ -4,7 +4,7 @@ An MPI-parallel pseudo-spectral solver for the 2D rotating shallow-water equatio
  
 ![Negative divergence fields and wave spectra for f = 1 and f = 3](results/fields_and_spectra.png)
  
-*Decaying wave + vortical flow at $N = 256$ ($t = 5$). Left and centre: negative divergence for $f = 1$ and $f = 3$; thin bright lines are shock-like fronts. Right: shell-summed spectra. The dashed line is a $k^{-2}$ guide only; at this resolution and hyperviscosity the spectrum is not a clean power law.*
+Decaying wave + vortical flow at $N = 256$ ($t = 5$). Left and centre: negative divergence for $f = 1$ and $f = 3$; thin bright lines are shock-like fronts. Right: shell-summed spectra. The dashed line is a $k^{-2}$ guide only; at this resolution and hyperviscosity the spectrum is not a clean power law.
  
 ## Equations
  
@@ -202,7 +202,7 @@ For each process count, the script runs `scripts/benchmark.py`, which times the 
 
 ![Strong scaling](results/scaling_n1024.png)
 
-*Strong scaling on Intel Core i5-8350U, 4 cores / 8 threads, $1024 \times 1024$ grid.*
+Strong scaling on Intel Core i5-8350U, 4 cores / 8 threads, $1024 \times 1024$ grid.
 
 
 ## Repository layout
